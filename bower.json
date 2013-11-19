@@ -1,0 +1,22 @@
+{
+  "name": "backbone-sample",
+  "version": "0.0.0",
+  "authors": [
+    "mid0111 <m.tajima0111@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.9",
+    "backbone": "~1.1.0",
+    "underscore": "~1.5.2",
+    "jquery": "~2.0.3",
+    "backbone.localStorage": "~1.1.7"
+  }
+}
