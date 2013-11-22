@@ -1,11 +1,7 @@
+
 html
 head
   meta(charset="utf-8")
-  script(src="lib/underscore/underscore.js")
-  script(src="lib/jquery/jquery.js")
-  script(src="lib/backbone/backbone.js")
-  script(src="lib/backbone.localStorage/backbone.localStorage.js")
-  script(src="javascripts/app/addressbook.js")
 
 body
   div(id="app")
@@ -15,4 +11,6 @@ body
       ul(id="list")
 
     button(id="delete-all") Delete all
+
+  script(data-main="javascripts/app.js", src="lib/requirejs/require.js")
 
