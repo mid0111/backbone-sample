@@ -66,20 +66,20 @@ $(function() {
     el: $('#app'),
 
     events: {
-      'keypress #new-Address': 'keyPress',
-      'clicck #delete-all': 'deleteAll'
+      'keypress #new-address': 'keyPress',
+      'click #delete-all': 'deleteAll'
     },
 
     initialize: function() {
       this.input = this.$('#new-Address');
-      Address.bind('add', this.add, this);
-      Address.bind('reset', this.addAll, this);
+      Addresses.bind('add', this.add, this);
+      Addresses.bind('reset', this.addAll, this);
       Addresses.fetch();
     },
 
     add: function(address) {
       var view = new AddressView({model: address});
-      this.$('#list').append(view.rendder().el);
+      this.$('#list').append(view.render().el);
     },
  
     addAll: function() {
@@ -94,13 +94,12 @@ $(function() {
     },
 
     deleteAll: function(e) {
-      var address = Addresses.first();
-      while(address !== null) {
+      Addresses.each(function(address) {
         address.destroy();
-      }
+      });
     }
   });
 
   var App = new AppView;
 
-})
+});
