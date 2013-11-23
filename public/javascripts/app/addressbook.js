@@ -98,9 +98,13 @@ define([
       },
 
       deleteAll: function(e) {
-        Addresses.each(function(address) {
+        while(true) {
+          var address = Addresses.first();
+          if(address == null || address === 'undefined') {
+            break;
+          }
           address.destroy();
-        });
+        }
       }
     });
 
