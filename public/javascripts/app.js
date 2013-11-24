@@ -27,11 +27,11 @@ requirejs.config({
 
 // Start the main app logic.
 requirejs([
-  'app/addressbook',
+  'app/main',
   'underscore', 
   'jquery', 
   'backbone', 
   'backbone.localStorage'], 
-function(addressbook) {
-  addressbook.initialize();
+function(AppView) {
+  var App = new AppView;
 });
