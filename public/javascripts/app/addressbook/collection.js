@@ -1,5 +1,4 @@
 define(function(require) {
-  var $ = require('jquery');
   var _ = require('underscore');
   var Backbone = require('backbone');
   var Address = require('app/addressbook/model');
