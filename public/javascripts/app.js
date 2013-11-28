@@ -27,11 +27,14 @@ requirejs.config({
 
 // Start the main app logic.
 requirejs([
-  'app/main',
+  // 'app/main',
+  'app/router',
   'underscore', 
   'jquery', 
   'backbone', 
   'backbone.localStorage'], 
-function(AppView) {
-  var App = new AppView;
+function(Router) {
+  // var App = new AppView;
+  var AppRouter = new Router;
+  Backbone.history.start({pushState: true});
 });
